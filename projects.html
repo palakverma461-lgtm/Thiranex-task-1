@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Jane Doe - Accessible Web Projects</title>
+  <meta name="description" content="Explore the portfolio of web projects built by Jane Doe, focused on high accessibility compliance, clean user interfaces, and semantic HTML structure.">
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Projects | Jane Doe - Accessible Web Projects">
+  <meta property="og:description" content="Explore the portfolio of web projects built by Jane Doe, focused on high accessibility compliance, clean user interfaces, and semantic HTML.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://janedoe.dev/projects">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Keyboard Accessibility: Skip to Main Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header Section with Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="Jane Doe Homepage">Jane<span>Doe</span></a>
+      
+      <!-- Mobile Navigation Toggle Button -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open Navigation Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Landmark Section -->
+  <main id="main-content" tabindex="-1">
+    
+    <section class="section" aria-labelledby="projects-heading">
+      <h1 id="projects-heading" class="section-title">My Projects</h1>
+      <p style="margin-bottom: var(--spacing-xl); color: var(--color-text-muted);">
+        A collection of web applications designed with semantic HTML5 and optimized for assistive technologies like screen readers and keyboard-only navigation.
+      </p>
+
+      <!-- Projects Grid Layout -->
+      <div class="projects-grid">
+        
+        <!-- Project 1: Accessible Dashboard -->
+        <article class="project-card" aria-labelledby="project-1-title">
+          <figure class="project-image-wrapper">
+            <img class="project-image" src="./images/project-dashboard.png" alt="A dark mode web analytics dashboard featuring colorful graphs, tables, and metric cards.">
+            <figcaption class="visually-hidden">Preview screenshot of the Analytics Dashboard project</figcaption>
+          </figure>
+          <div class="project-content">
+            <h2 id="project-1-title" class="project-title">Accessible Analytics Dashboard</h2>
+            <p class="project-description">
+              A high-contrast, fully keyboard-navigable dashboard for visualizing user telemetry. Supports custom screen reader descriptions for complex charts.
+            </p>
+            <ul class="project-tags" aria-label="Technologies used in Project 1">
+              <li class="project-tag">HTML5 Canvas</li>
+              <li class="project-tag">CSS Grid</li>
+              <li class="project-tag">ARIA Live</li>
+              <li class="project-tag">Vite</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com" class="project-link" target="_blank" rel="noopener" aria-label="View Accessible Analytics Dashboard source code on GitHub (opens in new tab)">GitHub</a>
+              <a href="https://github.com" class="project-link" target="_blank" rel="noopener" aria-label="Visit Accessible Analytics Dashboard live demo (opens in new tab)">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Mobile E-Commerce App mockup/UI -->
+        <article class="project-card" aria-labelledby="project-2-title">
+          <figure class="project-image-wrapper">
+            <img class="project-image" src="./images/project-mobile.png" alt="A mobile banking screen showing transactions, a user profile, and high contrast layout.">
+            <figcaption class="visually-hidden">Preview screenshot of the Mobile Bank Interface project</figcaption>
+          </figure>
+          <div class="project-content">
+            <h2 id="project-2-title" class="project-title">Accessible Mobile Bank Interface</h2>
+            <p class="project-description">
+              An inclusive banking web application optimized for screen readers and magnification tools. Passes all WCAG 2.1 AAA color contrast requirements.
+            </p>
+            <ul class="project-tags" aria-label="Technologies used in Project 2">
+              <li class="project-tag">CSS Flexbox</li>
+              <li class="project-tag">Focus Trapping</li>
+              <li class="project-tag">Vanilla JS</li>
+              <li class="project-tag">WCAG 2.1 AAA</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com" class="project-link" target="_blank" rel="noopener" aria-label="View Mobile Bank Interface source code on GitHub (opens in new tab)">GitHub</a>
+              <a href="https://github.com" class="project-link" target="_blank" rel="noopener" aria-label="Visit Mobile Bank Interface live demo (opens in new tab)">Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">&copy; 2026 Jane Doe. All rights reserved. Conforms to WCAG 2.1 AA guidelines.</p>
+      <ul class="footer-links" aria-label="Social Media Connections">
+        <li><a href="https://github.com" class="footer-link" target="_blank" rel="noopener" aria-label="Jane's GitHub (opens in new tab)">GitHub</a></li>
+        <li><a href="https://linkedin.com" class="footer-link" target="_blank" rel="noopener" aria-label="Jane's LinkedIn (opens in new tab)">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

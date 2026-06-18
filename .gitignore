@@ -1,0 +1,18 @@
+# Dependency Directories
+node_modules/
+
+# Build Directory
+dist/
+
+# OS Metadata Files
+.DS_Store
+Thumbs.db
+
+# IDE configuration files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

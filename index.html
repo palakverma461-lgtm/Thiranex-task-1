@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe | Creative Developer & Accessibility Specialist</title>
+  <meta name="description" content="Portfolio of Jane Doe, a Creative Frontend Developer specializing in building modern, performant, and fully WCAG-accessible web experiences. Check out my work and contact me.">
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Jane Doe | Creative Developer & Accessibility Specialist">
+  <meta property="og:description" content="Portfolio of Jane Doe, a Creative Frontend Developer specializing in building modern, performant, and fully WCAG-accessible web experiences.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://janedoe.dev">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Keyboard Accessibility: Skip to Main Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header Section with Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="Jane Doe Homepage">Jane<span>Doe</span></a>
+      
+      <!-- Mobile Navigation Toggle Button -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open Navigation Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Landmark Section -->
+  <main id="main-content" tabindex="-1">
+    
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <h1 id="hero-heading">Crafting <span>Digital Spaces</span> for Everyone</h1>
+      <p>
+        Hi, I'm Jane. I'm a Frontend Developer dedicated to creating beautiful, interactive, and fully inclusive web experiences that adhere to high WCAG accessibility standards.
+      </p>
+      <div class="cta-group">
+        <a href="projects.html" class="btn btn-primary">View My Work</a>
+        <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+      </div>
+    </section>
+
+    <!-- Short Intro/Featured Section -->
+    <section class="section" aria-labelledby="featured-heading">
+      <h2 id="featured-heading" class="section-title">My Philosophy</h2>
+      <div class="about-grid">
+        <article>
+          <h3>Accessibility First</h3>
+          <p>
+            The web should be accessible to all, regardless of ability. I build websites using semantic markup and strict keyboard navigability so everyone enjoys a premium browsing experience.
+          </p>
+        </article>
+        <article>
+          <h3>High Performance</h3>
+          <p>
+            Optimized assets and clean code are critical for keeping sites fast. Fast load times improve both user engagement and search engine rankings.
+          </p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">&copy; 2026 Jane Doe. All rights reserved. Conforms to WCAG 2.1 AA guidelines.</p>
+      <ul class="footer-links" aria-label="Social Media Connections">
+        <li><a href="https://github.com" class="footer-link" target="_blank" rel="noopener" aria-label="Jane's GitHub (opens in new tab)">GitHub</a></li>
+        <li><a href="https://linkedin.com" class="footer-link" target="_blank" rel="noopener" aria-label="Jane's LinkedIn (opens in new tab)">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

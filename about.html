@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Jane Doe - Accessibility Engineer</title>
+  <meta name="description" content="Learn more about Jane Doe's background, professional skills, and work history. Discover my dedication to web accessibility and frontend development.">
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="About | Jane Doe - Accessibility Engineer">
+  <meta property="og:description" content="Learn more about Jane Doe's background, professional skills, and work history. Discover my dedication to web accessibility and frontend development.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://janedoe.dev/about">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Keyboard Accessibility: Skip to Main Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header Section with Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="Jane Doe Homepage">Jane<span>Doe</span></a>
+      
+      <!-- Mobile Navigation Toggle Button -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open Navigation Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Landmark Section -->
+  <main id="main-content" tabindex="-1">
+    
+    <!-- About Section -->
+    <section class="section" aria-labelledby="about-heading">
+      <h1 id="about-heading" class="section-title">About Me</h1>
+      
+      <div class="about-grid">
+        <article aria-labelledby="bio-heading">
+          <h2 id="bio-heading" class="visually-hidden">Biography</h2>
+          <p>
+            I am a software engineer with over 5 years of experience specializing in building responsive and fully accessible web interfaces. My passion lies in making sure that interfaces are usable by everyone, regardless of physical or cognitive abilities.
+          </p>
+          <p style="margin-top: 1rem;">
+            Throughout my career, I've worked closely with designers, product managers, and QA specialists to audit, re-architect, and build web applications that strictly adhere to WCAG 2.1 AA level criteria.
+          </p>
+        </article>
+
+        <section aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Core Skills</h2>
+          <p>Here are the technologies and standards I specialize in:</p>
+          <ul class="skills-list" aria-label="Technical Skills Grid">
+            <li class="skill-tag">HTML5 / Semantic Markup</li>
+            <li class="skill-tag">ARIA Roles & Attributes</li>
+            <li class="skill-tag">Vanilla CSS / Variables</li>
+            <li class="skill-tag">Accessible JavaScript</li>
+            <li class="skill-tag">Vite & Bundlers</li>
+            <li class="skill-tag">Lighthouse / Axe DevTools</li>
+            <li class="skill-tag">Screen Reader Testing</li>
+            <li class="skill-tag">SEO Optimization</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section class="section" aria-labelledby="experience-heading">
+      <h2 id="experience-heading" class="section-title">Professional Experience</h2>
+      <div class="timeline">
+        
+        <article class="timeline-item" aria-labelledby="role-1-title">
+          <span class="timeline-date">2024 - Present</span>
+          <h3 id="role-1-title" class="timeline-title">Lead Accessibility Engineer</h3>
+          <p class="timeline-subtitle">InclusivWeb Agency</p>
+          <p>
+            Advise development teams on designing and implementing highly accessible web components. Audit existing codebases, reducing accessibility barriers by 95% on client applications.
+          </p>
+        </article>
+
+        <article class="timeline-item" aria-labelledby="role-2-title">
+          <span class="timeline-date">2021 - 2024</span>
+          <h3 id="role-2-title" class="timeline-title">Senior Frontend Developer</h3>
+          <p class="timeline-subtitle">TechCraft Solutions</p>
+          <p>
+            Built responsive customer portals using modern design patterns. Optimized asset delivery schedules, reducing page loading times by 40% while ensuring 100% keyboard nav support.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">&copy; 2026 Jane Doe. All rights reserved. Conforms to WCAG 2.1 AA guidelines.</p>
+      <ul class="footer-links" aria-label="Social Media Connections">
+        <li><a href="https://github.com" class="footer-link" target="_blank" rel="noopener" aria-label="Jane's GitHub (opens in new tab)">GitHub</a></li>
+        <li><a href="https://linkedin.com" class="footer-link" target="_blank" rel="noopener" aria-label="Jane's LinkedIn (opens in new tab)">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

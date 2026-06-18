@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Jane Doe - Accessibility Engineer</title>
+  <meta name="description" content="Get in touch with Jane Doe. Use this fully accessible, tab-navigable contact form to send questions, feedback, or employment opportunities.">
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Contact | Jane Doe - Accessibility Engineer">
+  <meta property="og:description" content="Get in touch with Jane Doe. Use this fully accessible, tab-navigable contact form to send questions or inquiries.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://janedoe.dev/contact">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Keyboard Accessibility: Skip to Main Content Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <!-- Header Section with Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="Jane Doe Homepage">Jane<span>Doe</span></a>
+      
+      <!-- Mobile Navigation Toggle Button -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open Navigation Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Landmark Section -->
+  <main id="main-content" tabindex="-1">
+    
+    <section class="section" aria-labelledby="contact-heading">
+      <h1 id="contact-heading" class="section-title">Contact Me</h1>
+      <p style="margin-bottom: var(--spacing-xl); text-align: center; color: var(--color-text-muted);">
+        Have a question or want to work together? Please fill out the form below. Required fields are marked with an asterisk (*).
+      </p>
+
+      <div class="contact-container">
+        
+        <!-- Live region for announcing success states to screen readers -->
+        <div id="success-banner" class="announcement-banner" role="status" aria-live="polite">
+          <span id="success-message"></span>
+          <button type="button" id="close-banner-btn" class="announcement-close" aria-label="Dismiss success message">&times;</button>
+        </div>
+
+        <!-- Accessible Form -->
+        <form id="contact-form" novalidate tabindex="-1" aria-label="Contact Form">
+          
+          <!-- Name Field -->
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name <span aria-hidden="true">*</span></label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              class="form-input" 
+              required 
+              aria-describedby="name-hint name-error"
+              autocomplete="name">
+            <span id="name-hint" class="form-hint">Please enter your first and last name.</span>
+            <span id="name-error" class="form-error" role="alert" aria-live="assertive"></span>
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-input" 
+              required 
+              aria-describedby="email-hint email-error"
+              autocomplete="email">
+            <span id="email-hint" class="form-hint">We'll use this to reply to your message. We do not share emails.</span>
+            <span id="email-error" class="form-error" role="alert" aria-live="assertive"></span>
+          </div>
+
+          <!-- Message Field -->
+          <div class="form-group">
+            <label for="message" class="form-label">Message <span aria-hidden="true">*</span></label>
+            <textarea 
+              id="message" 
+              name="message" 
+              class="form-input" 
+              rows="6" 
+              required 
+              aria-describedby="message-hint message-error"></textarea>
+            <span id="message-hint" class="form-hint">Provide details on how we can help you.</span>
+            <span id="message-error" class="form-error" role="alert" aria-live="assertive"></span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <p class="footer-text">&copy; 2026 Jane Doe. All rights reserved. Conforms to WCAG 2.1 AA guidelines.</p>
+      <ul class="footer-links" aria-label="Social Media Connections">
+        <li><a href="https://github.com" class="footer-link" target="_blank" rel="noopener" aria-label="Jane's GitHub (opens in new tab)">GitHub</a></li>
+        <li><a href="https://linkedin.com" class="footer-link" target="_blank" rel="noopener" aria-label="Jane's LinkedIn (opens in new tab)">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
